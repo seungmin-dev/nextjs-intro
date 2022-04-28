@@ -1,5 +1,7 @@
 import NavBar from "../components/NavBar";
 import "../styles/globals.css";
+// 일반 css 파일은 _app.js 에서만 import 가능
+// 다른 page에서는 module.css 만 import 가능
 
 export default function App({Component, pageProps}) {
     return (
