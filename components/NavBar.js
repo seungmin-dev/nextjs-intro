@@ -4,12 +4,12 @@ import styles from "./NavBar.module.css";
 
 export default function NavBar() {
     const router = useRouter();
-    return <nav className={styles.nav}>
+    return <nav>
         <Link href="/">
-            <a>Home</a>
+            <a className={`${styles.link} ${router.pathname === "/" ? styles.active : ""}`}>Home</a>
         </Link>
         <Link href="/about">
-            <a>About</a>
+            <a className={[styles.link, router.pathname === "/about" ? styles.active : "",].join(" ")}>About</a>
         </Link>
     </nav>
 }
